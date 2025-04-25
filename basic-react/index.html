@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <meta charset="utf-8" />
+            <title>React Basic</title>
+            <link href="./styles.css" rel="stylesheet" />
+        </head>
+    </html>
+    <body>
+        <!-- Target container -->
+         <div id="root"></div>
+
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script crossorigin src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+        <script>
+            // Pure react and JavaScript code...
+            const dish = React.createElement("h1", null, "Baked Salmon");
+            const dessert = React.createElement("h2", null, "Coconut cream pie");
+
+            
+            // const ingredients = React.createElement("ul", null, 
+            //                                 React.createElement("li", {className: 'list-item'}, "2 lb salmon"),
+            //                                 React.createElement("li", {className: 'list-item'}, "5 sprigs fresh rosemary"),
+            //                                 React.createElement("li", {className: 'list-item'}, "2 tablespoons olive oil"),
+            //                                 React.createElement("li", {className: 'list-item'}, "2 small lemons"),
+            //                                 React.createElement("li", {className: 'list-item'}, "1 teaspoon kosher salt"));
+            /** 
+             * Simplify adding a list of item to props.children by mapping it...
+             * 
+             * 
+             * */
+            const listOfIngredients = ["2 lb salmon", "5 sprigs fresh rosemary", "2 tablespoons olive oil", "2 small lemons", "1 teaspoon kosher salt", "4 cloves of chopped garlic"];
+            const ingredients = React.createElement("ul", null, listOfIngredients.map((l, index) => React.createElement("li", { key: index, className: "list-item"}, l)));            
+            
+            /** 
+             * Creating components with React
+             * */
+            function IngredientsList({items}) {
+
+                return React.createElement("ul", null, items.map((l, index) => React.createElement("li", { key: index, className: "list-item"}, l))); 
+            }
+
+            ReactDOM.render([dish, dessert, ingredients, React.createElement(IngredientsList, { items: listOfIngredients }, null)], document.getElementById("root"));
+        </script>
+    </body>
+</html>
