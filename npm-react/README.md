@@ -2,6 +2,8 @@
 
 This will guide you step by step what tools like CRA or vite cli tools do under the hood to get a better grip on what's going on..
 
+** Note ** Webpack & babel configurations have changed since React 19, this project is written over react 18 - so make sure you install this version react & react-dom ^18.2.0 if following this tutorial
+
 We can start with:
 
 `npm init -y`
