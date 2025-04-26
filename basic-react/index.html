@@ -14,7 +14,75 @@
         <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
         <script crossorigin src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
-        <script>
+
+        <script type="text/babel">
+            // JSX code or link to separate JS file that contains JSX
+            const data = [
+                {
+                    name: "Baked Salmon",
+                    ingredients: [
+                        { name: "Salmon", amount: 1, measurement: "1 lb" },
+                        { name: "Pine nuts", amount: 1, measurement: "cup" },
+                        { name: "Butter Lettuce", amount: 2, measurement: "cups" },
+                        { name: "Yellow Squash", amount: 1, measurement: "med" },
+                        { name: "Olive oil", amount: 0.5, measurement: "cup" },
+                        { name: "Garlic", amount: 3, measurement: "cloves" }
+                    ],
+                    steps: [
+                        "Preheat the oven to 350 degrees",
+                        "Spread the olive oil around a glass baking dish", 
+                        "Add the yellow squash and place in the oven for 30 mins.",
+                        "Add the salmon, garlic, and pine nuts to the dish.",
+                        "Bake for 15 minutes.",
+                        "Remove from oven.  Add the lettuce and serve."
+                    ]
+                }
+            ];
+
+            function Recipe ({ name, ingredients, steps }) {
+                return (
+                    <section id={name.toLowerCase().replace(/ /g, "-")}>
+                        <h1>{name}</h1>
+                        <ul className="ingredients">
+                            {ingredients.map((ingredient, i) => (
+                                <li key={i}>{ingredient.name}</li>
+                            ))}
+                        </ul>
+                        <section className="instructions">
+                            <h2>Cooking Instructions</h2>
+                            {steps.map((step, i) => (
+                                <p key={i}>{step}</p>
+                            ))}
+                        </section>
+                    </section>
+                )
+            }
+
+            function Menu ({ title, recipes }) {
+                return (
+                    <article>
+                        <header>
+                            <h1>{title}</h1>
+                        </header>
+                        <div className="recipes">
+                            {recipes.map((recipe, i) => (
+                                <Recipe
+                                    key={i}
+                                    { ...recipe }
+                                />
+                            ))}
+                        </div>
+                    </article>
+                )
+            }
+
+            ReactDOM.render(
+                <Menu recipes={data} title="Delicious Recipes" />,
+                document.getElementById("root")
+            )
+        </script>
+
+        <!-- <script>
             // Pure react and JavaScript code...
             const dish = React.createElement("h1", null, "Baked Salmon");
             const dessert = React.createElement("h2", null, "Coconut cream pie");
@@ -43,6 +111,6 @@
             }
 
             ReactDOM.render([dish, dessert, ingredients, React.createElement(IngredientsList, { items: listOfIngredients }, null)], document.getElementById("root"));
-        </script>
+        </script> -->
     </body>
 </html>
