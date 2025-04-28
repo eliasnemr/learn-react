@@ -2,6 +2,7 @@ import React from "react";
 import { createRoot } from "react-dom/client";
 import Menu from "./components/Menu";
 import data from "./data/recipes.json";
+import StarRating from "./components/StarRating";
 
 // Get the root element
 const rootElement = document.getElementById("root");
@@ -10,4 +11,4 @@ const rootElement = document.getElementById("root");
 const root = createRoot(rootElement);
 
 // Render your app
-root.render(<Menu recipes={data} />);
+root.render(<StarRating totalStars={5} />);
