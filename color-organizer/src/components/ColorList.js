@@ -1,8 +1,12 @@
 import React from "react";
 import Color from "./Color";
+import { ColorContext } from "..";
+import { useColors } from "../providers/color-hooks";
 
-export default function ColorList({ colors = [], onRemoveColor = f => f, onRateColor = f => f }) {
-    if (!colors.length) return <div>No Colors Listed.</div>;
+export default function ColorList() {
+    const { colors } = useColors();
+    
+    if (!colors.length) return <div>No Colors Listed. (Add a color) </div>;
 
     return (
         <div>
