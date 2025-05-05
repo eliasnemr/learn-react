@@ -1,14 +1,16 @@
-import React, { useState } from "react";
+import React from "react";
 import { useInput } from "../hooks/useInput";
+import { useColors } from "../providers/color-hooks";
 
 // declarative code, controlled component, it is controlled by react
-export default function AddColorForm({ onNewColor = f => f }) {
+export default function AddColorForm() {
+    const { addColor } = useColors();
     const [titleProps, resetTitle] = useInput("");
     const [colorProps, resetColor] = useInput("#000000");
 
     const submit = e => {
         e.preventDefault();
-        onNewColor(titleProps.value, colorProps.value);
+        addColor(titleProps.value, colorProps.value);
         resetTitle();
         resetColor();
     }

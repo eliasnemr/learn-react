@@ -1,14 +1,17 @@
-import React, { useState } from "react";
+import React, { useEffect, useMemo } from "react";
+import useAnyKeyToRender from "../hooks/useAnyKeyToRender";
 
 export default function App() {
-    const [checked, setChecked] = useState(false);
+    useAnyKeyToRender();
 
-    alert(`checked: ${checked.toString()}`);
+    const words = useMemo(() => ["stick", "powder", "day"], []);
+    useEffect(() => {
+        console.log("fresh render");
+    }, [words]);
 
     return (
         <>
-            <input type="checkbox" value={checked} onChange={() => setChecked(checked => !checked)} />
-            {checked ? "checked" : "not checked"}
+            <h1>Open the console</h1>
         </>
     )
 }
