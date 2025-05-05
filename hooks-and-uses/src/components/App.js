@@ -1,17 +1,19 @@
-import React, { useEffect, useMemo } from "react";
-import useAnyKeyToRender from "../hooks/useAnyKeyToRender";
+import React from "react";
+import User from "./User";
 
 export default function App() {
-    useAnyKeyToRender();
+    // useAnyKeyToRender();
+    
+    // useEffect(() => {
+    //     console.log("fresh render");
+    // });
 
-    const words = useMemo(() => ["stick", "powder", "day"], []);
-    useEffect(() => {
-        console.log("fresh render");
-    }, [words]);
+    // useLayoutEffect(() => console.log("useLayoutEffect"));
 
     return (
         <>
-            <h1>Open the console</h1>
+            <User />
+
         </>
     )
 }
