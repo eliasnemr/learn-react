@@ -1,0 +1,92 @@
+[
+    {
+      "id": "0175d1f0-a8c6-41bf-8d02-df5734d829a4",
+      "title": "ocean at dusk",
+      "color": "#00c4e2",
+      "rating": 5
+    },
+    {
+      "id": "2a7b9d34-c5e8-42f1-b3a7-9c8d56e7f123",
+      "title": "ocean at dawn",
+      "color": "#6ab7ff",
+      "rating": 4
+    },
+    {
+      "id": "3c8d4e5f-6a7b-48c9-9d0e-1f2a3b4c5d6e",
+      "title": "stormy seas",
+      "color": "#1a3c5e",
+      "rating": 5
+    },
+    {
+      "id": "4d5e6f7g-8h9i-40j1-k2l3-m4n5o6p7q8r9",
+      "title": "calm waters",
+      "color": "#89cff0",
+      "rating": 3
+    },
+    {
+      "id": "5e6f7g8h-9i0j-41k2-l3m4-n5o6p7q8r9s0",
+      "title": "tropical reef",
+      "color": "#40e0d0",
+      "rating": 5
+    },
+    {
+      "id": "6f7g8h9i-0j1k-42l3-m4n5-o6p7q8r9s0t1",
+      "title": "deep abyss",
+      "color": "#000080",
+      "rating": 4
+    },
+    {
+      "id": "7g8h9i0j-1k2l-43m4-n5o6-p7q8r9s0t1u2",
+      "title": "arctic waters",
+      "color": "#b0e0e6",
+      "rating": 4
+    },
+    {
+      "id": "8h9i0j1k-2l3m-44n5-o6p7-q8r9s0t1u2v3",
+      "title": "ocean sunset",
+      "color": "#ff7f50",
+      "rating": 5
+    },
+    {
+      "id": "9i0j1k2l-3m4n-45o6-p7q8-r9s0t1u2v3w4",
+      "title": "misty harbor",
+      "color": "#708090",
+      "rating": 3
+    },
+    {
+      "id": "0j1k2l3m-4n5o-46p7-q8r9-s0t1u2v3w4x5",
+      "title": "coral garden",
+      "color": "#ff7f00",
+      "rating": 5
+    },
+    {
+      "id": "1k2l3m4n-5o6p-47q8-r9s0-t1u2v3w4x5y6",
+      "title": "ocean moonlight",
+      "color": "#191970",
+      "rating": 4
+    },
+    {
+      "id": "2l3m4n5o-6p7q-48r9-s0t1-u2v3w4x5y6z7",
+      "title": "tidal pool",
+      "color": "#20b2aa",
+      "rating": 3
+    },
+    {
+      "id": "3m4n5o6p-7q8r-49s0-t1u2-v3w4x5y6z7a8",
+      "title": "foggy coastline",
+      "color": "#778899",
+      "rating": 4
+    },
+    {
+      "id": "4n5o6p7q-8r9s-50t1-u2v3-w4x5y6z7a8b9",
+      "title": "bioluminescent waves",
+      "color": "#00ffff",
+      "rating": 5
+    },
+    {
+      "id": "5o6p7q8r-9s0t-51u2-v3w4-x5y6z7a8b9c0",
+      "title": "ocean thunderstorm",
+      "color": "#4682b4",
+      "rating": 5
+    }
+]
