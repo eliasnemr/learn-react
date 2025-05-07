@@ -9,7 +9,6 @@ export default function GithubUser({login}) {
 
     useEffect(() => {
         if (!data) return;
-        console.log('current data', data);
         if (data.login === login) return;
 
         const { name, avatar_url, location } = data;
