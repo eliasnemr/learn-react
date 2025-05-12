@@ -1,3 +1,4 @@
+import React from "react";
 import { useFetch } from "../hooks/useFetch"
 
 export default function Fetch({ uri, renderSuccess, loadingFallback = <p>loading...</p>, renderError = error => (<pre>{JSON.stringify(error, null, 2)}</pre>)}) {

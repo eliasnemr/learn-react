@@ -1,12 +1,12 @@
 import React from "react";
-import { useFetch } from "../hooks/useFetch";
 import Fetch from "./Fetch";
+import UserRepositores from "./UserRepositories";
 
 
 export default function GithubUser({login}) {    
-   return (
+    return (
         <Fetch 
-            uri={`https://api/github.com/${login}`}
+            uri={`https://api.github.com/users/${login}`}
             renderSuccess={UserDetails}
         />
     )
@@ -27,5 +27,6 @@ function UserDetails({ data }) {
                 {name && <p>{name}</p>}
                 {location && <p>{location}</p>}
             </div>
+            <UserRepositores login={login} onSelect={repoName => console.log(`${repoName} selected`)} />
         </div>)
 }

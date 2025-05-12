@@ -8,7 +8,11 @@ export function useFetch(uri) {
     useEffect(() => {
         if (!uri) return;
         fetch(uri)
-            .then(response => response.json())
+            .then(response => {
+                console.log(response);
+
+                return response.json();
+            })
             .then(setData)
             .then(() => setLoading(false))
             .catch(setError)
